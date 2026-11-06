@@ -53,11 +53,11 @@ Computes Indian income tax for salaried individuals under both old and new regim
 
 ### Three Implementations
 
-| Implementation | Approach | When to Use |
-|----------------|----------|-------------|
-| `impl_rules` | Hand-coded Python rules | ✅ Production: deterministic, auditable, fast |
-| `impl_llm_query` | Gemini API per request | ❌ Research only: non-deterministic, costly |
-| `impl_llm_compiled` | LLM generates rules once | ⚠️ Bootstrap: useful for initial rule generation |
+| Implementation | Approach | 
+|----------------|----------|
+| `impl_rules` | Hand-coded Python rules | 
+| `impl_llm_query` | Gemini API per request | 
+| `impl_llm_compiled` | LLM generates rules once | 
 
 ### Running Tests
 
