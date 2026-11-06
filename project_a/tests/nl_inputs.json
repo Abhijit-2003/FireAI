@@ -1,0 +1,745 @@
+[
+  {
+    "id": "NL001",
+    "input_text": "I earn 12 lakh per annum. My basic is 6 lakh. I get HRA of 3 lakh. I pay rent of 20000 per month in Mumbai. I'm 32 years old and invest 1.5 lakh in PPF.",
+    "expected_fields": {
+      "gross_salary": 1200000,
+      "basic_salary": 600000,
+      "hra_received": 300000,
+      "rent_paid": 240000,
+      "city_type": "metro",
+      "age": 32,
+      "section_80c": 150000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["da", "section_80d_self", "section_80d_parents", "home_loan_interest"]
+  },
+  {
+    "id": "NL002",
+    "input_text": "My annual salary is Rs. 18,00,000. Basic salary component is Rs. 7,20,000. I receive HRA of Rs. 3,60,000 per year. Monthly rent payment is Rs. 25,000 in Delhi NCR. Age: 48. I claim Section 80C deduction of Rs. 1,50,000 (EPF + ELSS), Section 80D of Rs. 25,000 for self health insurance, and NPS contribution of Rs. 50,000 under 80CCD(1B).",
+    "expected_fields": {
+      "gross_salary": 1800000,
+      "basic_salary": 720000,
+      "hra_received": 360000,
+      "rent_paid": 300000,
+      "city_type": "metro",
+      "age": 48,
+      "section_80c": 150000,
+      "section_80d_self": 25000,
+      "section_80ccd_1b": 50000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["da", "section_80d_parents", "home_loan_interest"]
+  },
+  {
+    "id": "NL003",
+    "input_text": "I am a senior citizen aged 67 years. My pension income is Rs. 8,00,000 per annum. I have invested Rs. 1,00,000 in Senior Citizens Savings Scheme under 80C. My medical insurance premium is Rs. 45,000 for self.",
+    "expected_fields": {
+      "gross_salary": 800000,
+      "age": 67,
+      "section_80c": 100000,
+      "section_80d_self": 45000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type", "da"]
+  },
+  {
+    "id": "NL004",
+    "input_text": "Annual package is 25 lakhs. Basic pay constitutes 40% of CTC i.e. 10 lakhs. House Rent Allowance is 5 lakhs annually. I reside in a rented apartment in Bengaluru paying Rs. 35,000 monthly. I am 40 years old. Deductions: 80C - 1.5L (EPF + PPF + LIC), 80CCD(1B) - 50K (NPS), 80D - 25K (self) + 25K (parents). Home loan interest: Rs. 2,00,000.",
+    "expected_fields": {
+      "gross_salary": 2500000,
+      "basic_salary": 1000000,
+      "hra_received": 500000,
+      "rent_paid": 420000,
+      "city_type": "metro",
+      "age": 40,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "section_80d_parents": 25000,
+      "home_loan_interest": 200000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["da"]
+  },
+  {
+    "id": "NL005",
+    "input_text": "Salary: 50,00,000 per annum. Basic: 20,00,000. HRA: 10,00,000. Rent: 60,000/month in Mumbai. Age: 55. 80C: 1,50,000. 80CCD: 50,000. 80D self: 25,000. 80D parents (senior): 50,000. Home loan interest: 2,00,000.",
+    "expected_fields": {
+      "gross_salary": 5000000,
+      "basic_salary": 2000000,
+      "hra_received": 1000000,
+      "rent_paid": 720000,
+      "city_type": "metro",
+      "age": 55,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "section_80d_parents": 50000,
+      "parents_senior_citizen": true,
+      "home_loan_interest": 200000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["da"]
+  },
+  {
+    "id": "NL006",
+    "input_text": "I'm a fresh graduate earning 4 lakhs annually at a Tier-2 city. My basic is 2 lakhs and HRA is 80,000. I pay 10,000 rent per month. I'm 23 and have no investments yet.",
+    "expected_fields": {
+      "gross_salary": 400000,
+      "basic_salary": 200000,
+      "hra_received": 80000,
+      "rent_paid": 120000,
+      "city_type": "non_metro",
+      "age": 23
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["da", "section_80c", "section_80d_self"]
+  },
+  {
+    "id": "NL007",
+    "input_text": "My compensation is 1 crore per annum. Base salary is 40 lakhs. HRA component is 20 lakhs. I live in a rented flat in South Mumbai at Rs. 1,00,000 per month. I am 50 years old. I maximize all available deductions under the old regime.",
+    "expected_fields": {
+      "gross_salary": 10000000,
+      "basic_salary": 4000000,
+      "hra_received": 2000000,
+      "rent_paid": 1200000,
+      "city_type": "metro",
+      "age": 50,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "section_80d_parents": 25000,
+      "home_loan_interest": 200000
+    },
+    "style": "formal_english",
+    "has_ambiguity": true,
+    "missing_fields": ["da"],
+    "ambiguity_note": "Maximize all deductions is ambiguous - unclear if parents are senior citizens"
+  },
+  {
+    "id": "NL008",
+    "input_text": "I draw a salary of Rs. 15 lakh. My employer provides a basic of Rs. 6 lakh and DA of Rs. 2 lakh. HRA received is Rs. 3 lakh. I pay a monthly rent of Rs. 15,000 in a non-metro city. I am 35 years of age. I invest Rs. 1.5 lakh in 80C instruments and Rs. 50,000 in NPS. My health insurance premium is Rs. 20,000.",
+    "expected_fields": {
+      "gross_salary": 1500000,
+      "basic_salary": 600000,
+      "da": 200000,
+      "hra_received": 300000,
+      "rent_paid": 180000,
+      "city_type": "non_metro",
+      "age": 35,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 20000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["section_80d_parents", "home_loan_interest"]
+  },
+  {
+    "id": "NL009",
+    "input_text": "I am 82 years old with a pension of Rs. 10,00,000 annually. I have fixed deposits giving me interest income included in this. I invest Rs. 1,50,000 under 80C in SCSS. My medical expenditure qualifies for Rs. 50,000 deduction under 80D.",
+    "expected_fields": {
+      "gross_salary": 1000000,
+      "age": 82,
+      "section_80c": 150000,
+      "section_80d_self": 50000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type"]
+  },
+  {
+    "id": "NL010",
+    "input_text": "My total income for FY 2024-25 is Rs. 7,50,000. I am 29 years old working in Hyderabad. My basic salary is Rs. 3,75,000. I do not receive any HRA. I have invested Rs. 1,20,000 in PPF and Rs. 15,000 in health insurance premium.",
+    "expected_fields": {
+      "gross_salary": 750000,
+      "basic_salary": 375000,
+      "hra_received": 0,
+      "city_type": "non_metro",
+      "age": 29,
+      "section_80c": 120000,
+      "section_80d_self": 15000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["da", "rent_paid", "home_loan_interest"]
+  },
+  {
+    "id": "NL011",
+    "input_text": "Gross salary is 20 lakhs per annum. Basic is 8 lakhs. I live in my own house so no HRA claim. I pay home loan EMI with interest component of Rs. 2.5 lakh annually. 80C investments total 1.5 lakh. 80D premium is 25K. Age 44.",
+    "expected_fields": {
+      "gross_salary": 2000000,
+      "basic_salary": 800000,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "age": 44,
+      "section_80c": 150000,
+      "section_80d_self": 25000,
+      "home_loan_interest": 250000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["da", "city_type"]
+  },
+  {
+    "id": "NL012",
+    "input_text": "I am a government employee with a salary of Rs. 10,00,000. My basic pay is Rs. 5,00,000 and DA is Rs. 2,00,000. I live in government quarters, so no HRA exemption. I contribute to GPF (80C) Rs. 1,50,000 and NPS Rs. 50,000. Home loan interest is Rs. 1,50,000. Age: 45.",
+    "expected_fields": {
+      "gross_salary": 1000000,
+      "basic_salary": 500000,
+      "da": 200000,
+      "hra_received": 0,
+      "age": 45,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "home_loan_interest": 150000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["rent_paid", "city_type", "section_80d_self"]
+  },
+  {
+    "id": "NL013",
+    "input_text": "Annual CTC of Rs. 30,00,000. Basic constitutes 40% which is 12 lakhs. HRA is 6 lakhs. Rent paid: Rs. 40,000 per month in Gurgaon. I am 42 years old. Full 80C utilization at 1.5L, NPS at 50K, health insurance 25K self and 25K parents, housing loan interest 2L.",
+    "expected_fields": {
+      "gross_salary": 3000000,
+      "basic_salary": 1200000,
+      "hra_received": 600000,
+      "rent_paid": 480000,
+      "city_type": "metro",
+      "age": 42,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "section_80d_parents": 25000,
+      "home_loan_interest": 200000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["da"]
+  },
+  {
+    "id": "NL014",
+    "input_text": "My package is Rs. 6,00,000 annually. Basic salary is Rs. 3,00,000. I receive HRA but live with my parents in a Tier-3 town, paying no rent. I have EPF contributions of Rs. 50,000. I am 27.",
+    "expected_fields": {
+      "gross_salary": 600000,
+      "basic_salary": 300000,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 27,
+      "section_80c": 50000
+    },
+    "style": "formal_english",
+    "has_ambiguity": true,
+    "missing_fields": ["hra_received", "da"],
+    "ambiguity_note": "HRA received mentioned but amount not specified"
+  },
+  {
+    "id": "NL015",
+    "input_text": "I have a salary of Rs. 22,00,000 per annum. Basic component is Rs. 8,80,000. HRA is Rs. 4,40,000. Monthly rent in Noida is Rs. 30,000. Age 43. Investments: PPF 1.5 lakh, NPS 50K, Mediclaim self 25K, parents 25K, home loan 2 lakh interest.",
+    "expected_fields": {
+      "gross_salary": 2200000,
+      "basic_salary": 880000,
+      "hra_received": 440000,
+      "rent_paid": 360000,
+      "city_type": "metro",
+      "age": 43,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "section_80d_parents": 25000,
+      "home_loan_interest": 200000
+    },
+    "style": "formal_english",
+    "has_ambiguity": false,
+    "missing_fields": ["da"]
+  },
+  {
+    "id": "NL016",
+    "input_text": "Bhai meri salary 10 lakh hai saal ki. Basic 5 lakh hai. HRA milta hai 2 lakh. Mumbai mein rent deta hoon 15000 mahina. Age 30. PPF mein daalta hoon 1.5 lakh. Koi aur investment nahi hai.",
+    "expected_fields": {
+      "gross_salary": 1000000,
+      "basic_salary": 500000,
+      "hra_received": 200000,
+      "rent_paid": 180000,
+      "city_type": "metro",
+      "age": 30,
+      "section_80c": 150000
+    },
+    "style": "hinglish",
+    "has_ambiguity": false,
+    "missing_fields": ["da", "section_80d_self"]
+  },
+  {
+    "id": "NL017",
+    "input_text": "Mera CTC 15 lakh hai. Basic 6 lakh, HRA 3 lakh milta hai. Bangalore mein rehta hoon, rent 20K per month. Umar 35 saal. 80C mein EPF aur PPF se 1.5 lakh, NPS mein 50 hazaar daalte hain. Health insurance ka premium 20 hazaar hai.",
+    "expected_fields": {
+      "gross_salary": 1500000,
+      "basic_salary": 600000,
+      "hra_received": 300000,
+      "rent_paid": 240000,
+      "city_type": "metro",
+      "age": 35,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 20000
+    },
+    "style": "hinglish",
+    "has_ambiguity": false,
+    "missing_fields": ["da"]
+  },
+  {
+    "id": "NL018",
+    "input_text": "Yaar meri salary 8 lakh hai. Basic kuch 4 lakh hoga. HRA bhi milta hai around 1.5 lakh types. Pune mein 12K ka flat liya hua hai rent pe. Main 28 ka hoon. PPF mein thoda invest karta hoon, lagbhag 80-90K.",
+    "expected_fields": {
+      "gross_salary": 800000,
+      "basic_salary": 400000,
+      "hra_received": 150000,
+      "rent_paid": 144000,
+      "city_type": "non_metro",
+      "age": 28,
+      "section_80c": 85000
+    },
+    "style": "hinglish",
+    "has_ambiguity": true,
+    "missing_fields": ["da"],
+    "ambiguity_note": "Basic and HRA are approximate (kuch, around, types). PPF is approximate (lagbhag 80-90K)."
+  },
+  {
+    "id": "NL019",
+    "input_text": "Salary 20 lakh milti hai. Basic 8 lakh. HRA 4 lakh. Delhi mein 30K ka ghar hai rent pe. 40 saal ka hoon. Puri 80C limit bharta hoon - PPF, ELSS, LIC sab mila ke. NPS bhi 50K. Insurance apna 25K aur maa-baap ka 25K. Home loan ka interest 2 lakh.",
+    "expected_fields": {
+      "gross_salary": 2000000,
+      "basic_salary": 800000,
+      "hra_received": 400000,
+      "rent_paid": 360000,
+      "city_type": "metro",
+      "age": 40,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "section_80d_parents": 25000,
+      "home_loan_interest": 200000
+    },
+    "style": "hinglish",
+    "has_ambiguity": false,
+    "missing_fields": ["da"]
+  },
+  {
+    "id": "NL020",
+    "input_text": "Papa retired hain, pension 6 lakh aati hai saal mein. Unki age 68 hai. SCSS mein 1 lakh daala hai 80C ke liye. Medical insurance 40 hazaar.",
+    "expected_fields": {
+      "gross_salary": 600000,
+      "age": 68,
+      "section_80c": 100000,
+      "section_80d_self": 40000
+    },
+    "style": "hinglish",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type"],
+    "ambiguity_note": "Describing someone else's (father's) tax situation"
+  },
+  {
+    "id": "NL021",
+    "input_text": "Bhai 25 lakh ki salary pe kitna tax lagega? HRA wagairah sab milta hai but abhi calculate nahi kiya. Old regime better hoga ya new? Main 38 ka hoon Mumbai mein kaam karta hoon.",
+    "expected_fields": {
+      "gross_salary": 2500000,
+      "city_type": "metro",
+      "age": 38
+    },
+    "style": "hinglish",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "section_80c"],
+    "ambiguity_note": "Vague about deductions, asking for comparison but insufficient data"
+  },
+  {
+    "id": "NL022",
+    "input_text": "Meri company se 7 lakh milta hai yearly. Chhote sheher mein rehti hoon, koi rent nahi deti. 26 saal ki hoon. PPF mein 50K invest karti hoon.",
+    "expected_fields": {
+      "gross_salary": 700000,
+      "city_type": "non_metro",
+      "rent_paid": 0,
+      "age": 26,
+      "section_80c": 50000
+    },
+    "style": "hinglish",
+    "has_ambiguity": false,
+    "missing_fields": ["basic_salary", "hra_received", "da"]
+  },
+  {
+    "id": "NL023",
+    "input_text": "Salary package 1 crore hai bhai. Basic 40L. HRA 20L milta hai. South Bombay mein 1 lakh ka flat hai rent pe. 50 saal ka hoon. Sab deductions max out kiye hue hain.",
+    "expected_fields": {
+      "gross_salary": 10000000,
+      "basic_salary": 4000000,
+      "hra_received": 2000000,
+      "rent_paid": 1200000,
+      "city_type": "metro",
+      "age": 50,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "home_loan_interest": 200000
+    },
+    "style": "hinglish",
+    "has_ambiguity": true,
+    "missing_fields": ["da"],
+    "ambiguity_note": "Max out deductions unclear - parents senior status unknown, 80D parents amount unknown"
+  },
+  {
+    "id": "NL024",
+    "input_text": "Mere husband ki salary 12L hai per year. Basic 50% yaani 6L. HRA 2.5L. Noida mein rent 18K monthly. Age 34. EPF se 80C cover ho jaata hai around 1L. Health insurance 15K.",
+    "expected_fields": {
+      "gross_salary": 1200000,
+      "basic_salary": 600000,
+      "hra_received": 250000,
+      "rent_paid": 216000,
+      "city_type": "metro",
+      "age": 34,
+      "section_80c": 100000,
+      "section_80d_self": 15000
+    },
+    "style": "hinglish",
+    "has_ambiguity": true,
+    "missing_fields": ["da"],
+    "ambiguity_note": "Describing spouse's income, 80C is approximate"
+  },
+  {
+    "id": "NL025",
+    "input_text": "Income 5 lakh saal ka. Koi HRA ya investment nahi. 30 saal. Gaon se hoon.",
+    "expected_fields": {
+      "gross_salary": 500000,
+      "hra_received": 0,
+      "city_type": "non_metro",
+      "age": 30
+    },
+    "style": "hinglish",
+    "has_ambiguity": false,
+    "missing_fields": ["basic_salary", "rent_paid", "da"]
+  },
+  {
+    "id": "NL026",
+    "input_text": "salary 8L, age 30",
+    "expected_fields": {
+      "gross_salary": 800000,
+      "age": 30
+    },
+    "style": "incomplete",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type", "section_80c", "section_80d_self", "da"]
+  },
+  {
+    "id": "NL027",
+    "input_text": "12 lakh CTC, Mumbai",
+    "expected_fields": {
+      "gross_salary": 1200000,
+      "city_type": "metro"
+    },
+    "style": "incomplete",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "age", "section_80c", "da"]
+  },
+  {
+    "id": "NL028",
+    "input_text": "I earn 15 lakhs. How much tax?",
+    "expected_fields": {
+      "gross_salary": 1500000
+    },
+    "style": "incomplete",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type", "age", "section_80c", "da"]
+  },
+  {
+    "id": "NL029",
+    "input_text": "Calculate tax for 20L salary with some deductions",
+    "expected_fields": {
+      "gross_salary": 2000000
+    },
+    "style": "incomplete",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type", "age", "section_80c", "section_80d_self", "da"],
+    "ambiguity_note": "Deductions mentioned but amounts not specified"
+  },
+  {
+    "id": "NL030",
+    "input_text": "Senior citizen, pension income",
+    "expected_fields": {},
+    "style": "incomplete",
+    "has_ambiguity": true,
+    "missing_fields": ["gross_salary", "basic_salary", "age", "section_80c", "rent_paid", "city_type"],
+    "ambiguity_note": "No amounts provided at all, age not specific (could be 60-80 or 80+)"
+  },
+  {
+    "id": "NL031",
+    "input_text": "50 lakh income, age 45, old regime best hai kya?",
+    "expected_fields": {
+      "gross_salary": 5000000,
+      "age": 45
+    },
+    "style": "incomplete",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type", "section_80c", "da"]
+  },
+  {
+    "id": "NL032",
+    "input_text": "I want to know tax for 30 lakh salary with HRA deduction. Am 40.",
+    "expected_fields": {
+      "gross_salary": 3000000,
+      "age": 40
+    },
+    "style": "incomplete",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type", "section_80c"],
+    "ambiguity_note": "HRA mentioned but no amounts for basic, HRA received, or rent"
+  },
+  {
+    "id": "NL033",
+    "input_text": "1 crore salary, Delhi, age 50, max everything",
+    "expected_fields": {
+      "gross_salary": 10000000,
+      "city_type": "metro",
+      "age": 50
+    },
+    "style": "incomplete",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid"],
+    "ambiguity_note": "Max everything is vague - need specific deduction amounts"
+  },
+  {
+    "id": "NL034",
+    "input_text": "My salary is Rs. 9,00,000. What deductions can I claim?",
+    "expected_fields": {
+      "gross_salary": 900000
+    },
+    "style": "incomplete",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "age", "hra_received", "rent_paid", "city_type"],
+    "ambiguity_note": "User asking about possible deductions, not providing current deduction info"
+  },
+  {
+    "id": "NL035",
+    "input_text": "Salary 7L, 28 years, want to compare old and new regime",
+    "expected_fields": {
+      "gross_salary": 700000,
+      "age": 28
+    },
+    "style": "incomplete",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type", "section_80c"]
+  },
+  {
+    "id": "NL036",
+    "input_text": "I receive HRA of 3 lakh from my employer but I don't pay any rent as I live in my own house. My salary is 10 lakh. I'm 35 and claim 80C of 1.5 lakh. I want HRA exemption.",
+    "expected_fields": {
+      "gross_salary": 1000000,
+      "hra_received": 300000,
+      "rent_paid": 0,
+      "age": 35,
+      "section_80c": 150000
+    },
+    "style": "contradictory",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "city_type", "da"],
+    "ambiguity_note": "Contradictory: wants HRA exemption but pays no rent - HRA exemption requires rent payment"
+  },
+  {
+    "id": "NL037",
+    "input_text": "My income is 4 lakh. I invest 2 lakh in 80C and 1 lakh in NPS under 80CCD(1B). I also pay home loan interest of 3 lakh. My total deductions are 6 lakh which is more than my income.",
+    "expected_fields": {
+      "gross_salary": 400000,
+      "section_80c": 200000,
+      "section_80ccd_1b": 100000,
+      "home_loan_interest": 300000
+    },
+    "style": "contradictory",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "age", "city_type"],
+    "ambiguity_note": "Contradictory: 80C claimed as 2L but max is 1.5L. 80CCD claimed as 1L but max is 50K. Deductions exceed income."
+  },
+  {
+    "id": "NL038",
+    "input_text": "I'm 55 years old and I want to claim senior citizen benefits. My salary is 12 lakh and I want 80D deduction of 50,000 for self which is the senior citizen limit.",
+    "expected_fields": {
+      "gross_salary": 1200000,
+      "age": 55,
+      "section_80d_self": 50000
+    },
+    "style": "contradictory",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type"],
+    "ambiguity_note": "Contradictory: age 55 is NOT senior citizen (must be 60+), but claims senior citizen 80D limit of 50K"
+  },
+  {
+    "id": "NL039",
+    "input_text": "I earn 8 lakh and want to use the new regime. My 80C investment is 1.5 lakh in PPF and I have home loan interest of 2 lakh. Please calculate using these deductions in new regime.",
+    "expected_fields": {
+      "gross_salary": 800000,
+      "section_80c": 150000,
+      "home_loan_interest": 200000
+    },
+    "style": "contradictory",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "age", "hra_received", "city_type"],
+    "ambiguity_note": "Contradictory: new regime does not allow 80C or home loan deductions"
+  },
+  {
+    "id": "NL040",
+    "input_text": "I'm claiming HRA exemption. Basic 5L, HRA received 2L, rent paid 25K per month in Mumbai. But I'm also claiming home loan interest of 2L for the same property in Mumbai.",
+    "expected_fields": {
+      "basic_salary": 500000,
+      "hra_received": 200000,
+      "rent_paid": 300000,
+      "city_type": "metro",
+      "home_loan_interest": 200000
+    },
+    "style": "contradictory",
+    "has_ambiguity": true,
+    "missing_fields": ["gross_salary", "age"],
+    "ambiguity_note": "Contradictory: claiming both HRA (implies renting) and home loan interest (implies owning) for the same city. Also missing gross salary."
+  },
+  {
+    "id": "NL041",
+    "input_text": "10L salary, calculate tax",
+    "expected_fields": {
+      "gross_salary": 1000000
+    },
+    "style": "amount_format",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "age", "hra_received", "rent_paid", "city_type"]
+  },
+  {
+    "id": "NL042",
+    "input_text": "My salary is 10 lakh per annum. Calculate my tax.",
+    "expected_fields": {
+      "gross_salary": 1000000
+    },
+    "style": "amount_format",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "age", "hra_received", "rent_paid", "city_type"]
+  },
+  {
+    "id": "NL043",
+    "input_text": "Salary: 10,00,000. 80C: 1,50,000. Age: 30.",
+    "expected_fields": {
+      "gross_salary": 1000000,
+      "section_80c": 150000,
+      "age": 30
+    },
+    "style": "amount_format",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "city_type"]
+  },
+  {
+    "id": "NL044",
+    "input_text": "I make 1000000 a year. Investments: 150000 in PPF, 50000 NPS. Health premium 25000. Rent 20k/month Bangalore. Age 33.",
+    "expected_fields": {
+      "gross_salary": 1000000,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "rent_paid": 240000,
+      "city_type": "metro",
+      "age": 33
+    },
+    "style": "amount_format",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "da"]
+  },
+  {
+    "id": "NL045",
+    "input_text": "Annual income: ₹15,00,000. PPF+ELSS: ₹1.5L. NPS: ₹50K. Mediclaim: ₹25K. Home loan int: ₹2L. No HRA. Age 40. Jaipur.",
+    "expected_fields": {
+      "gross_salary": 1500000,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "home_loan_interest": 200000,
+      "hra_received": 0,
+      "age": 40,
+      "city_type": "non_metro"
+    },
+    "style": "amount_format",
+    "has_ambiguity": false,
+    "missing_fields": ["basic_salary", "da"]
+  },
+  {
+    "id": "NL046",
+    "input_text": "yo whats the tax on like 12L salary? im 27 btw, living in blr paying 18k rent. got some ppf going around 1L i think",
+    "expected_fields": {
+      "gross_salary": 1200000,
+      "age": 27,
+      "city_type": "metro",
+      "rent_paid": 216000,
+      "section_80c": 100000
+    },
+    "style": "casual",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "da"],
+    "ambiguity_note": "Very casual, PPF amount approximate"
+  },
+  {
+    "id": "NL047",
+    "input_text": "bruh 20lpa, no savings, no investments, nothing. just straight salary. 32M mumbai. how much does the govt take?",
+    "expected_fields": {
+      "gross_salary": 2000000,
+      "age": 32,
+      "city_type": "metro"
+    },
+    "style": "casual",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid"]
+  },
+  {
+    "id": "NL048",
+    "input_text": "lol i earn 5L, do i even need to pay tax? 25yo in some random tier 3 city",
+    "expected_fields": {
+      "gross_salary": 500000,
+      "age": 25,
+      "city_type": "non_metro"
+    },
+    "style": "casual",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid"]
+  },
+  {
+    "id": "NL049",
+    "input_text": "so basically my pkg is 50lpa and I max out everything possible under old regime. 45 yrs old, delhi. parents are senior citizens so claiming their medical insurance too. got a fat home loan running as well.",
+    "expected_fields": {
+      "gross_salary": 5000000,
+      "age": 45,
+      "city_type": "metro",
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "section_80d_parents": 50000,
+      "parents_senior_citizen": true,
+      "home_loan_interest": 200000
+    },
+    "style": "casual",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "rent_paid", "da"],
+    "ambiguity_note": "Max out everything is vague, basic/HRA/rent not specified"
+  },
+  {
+    "id": "NL050",
+    "input_text": "hey can u calc tax for 8L income? im 29, pune, rent 10k/month. ppf 80k. thats about it i guess",
+    "expected_fields": {
+      "gross_salary": 800000,
+      "age": 29,
+      "city_type": "non_metro",
+      "rent_paid": 120000,
+      "section_80c": 80000
+    },
+    "style": "casual",
+    "has_ambiguity": true,
+    "missing_fields": ["basic_salary", "hra_received", "da"]
+  }
+]
+

@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "TC001",
+    "description": "Salary 50K no deductions age 30",
+    "input": {
+      "gross_salary": 50000,
+      "basic_salary": 50000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "basic",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 0,
+      "tax_before_rebate": 0,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "expected_new_regime": {
+      "taxable_income": 0,
+      "tax_before_rebate": 0,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC005",
+    "description": "Salary 3L no deductions age 30",
+    "input": {
+      "gross_salary": 300000,
+      "basic_salary": 300000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "basic",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 250000,
+      "tax_before_rebate": 0,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "expected_new_regime": {
+      "taxable_income": 225000,
+      "tax_before_rebate": 0,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC007",
+    "description": "Salary 5L no deductions age 30",
+    "input": {
+      "gross_salary": 500000,
+      "basic_salary": 500000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "basic",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 450000,
+      "tax_before_rebate": 10000,
+      "rebate_87a": 10000,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "expected_new_regime": {
+      "taxable_income": 425000,
+      "tax_before_rebate": 6250,
+      "rebate_87a": 6250,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC008",
+    "description": "Salary 5.5L no deductions age 30",
+    "input": {
+      "gross_salary": 550000,
+      "basic_salary": 550000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "basic",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 500000,
+      "tax_before_rebate": 12500,
+      "rebate_87a": 12500,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "expected_new_regime": {
+      "taxable_income": 475000,
+      "tax_before_rebate": 8750,
+      "rebate_87a": 8750,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC012",
+    "description": "Salary 10L no deductions age 30",
+    "input": {
+      "gross_salary": 1000000,
+      "basic_salary": 1000000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "basic",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 950000,
+      "tax_before_rebate": 102500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 4100,
+      "total_tax": 106600
+    },
+    "expected_new_regime": {
+      "taxable_income": 925000,
+      "tax_before_rebate": 42500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 1700,
+      "total_tax": 44200
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC014",
+    "description": "Salary 15L no deductions age 30",
+    "input": {
+      "gross_salary": 1500000,
+      "basic_salary": 1500000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "basic",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 1450000,
+      "tax_before_rebate": 247500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 9900,
+      "total_tax": 257400
+    },
+    "expected_new_regime": {
+      "taxable_income": 1425000,
+      "tax_before_rebate": 125000,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 5000,
+      "total_tax": 130000
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC016",
+    "description": "Salary 20L no deductions age 30",
+    "input": {
+      "gross_salary": 2000000,
+      "basic_salary": 2000000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "basic",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 1950000,
+      "tax_before_rebate": 397500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 15900,
+      "total_tax": 413400
+    },
+    "expected_new_regime": {
+      "taxable_income": 1925000,
+      "tax_before_rebate": 267500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 10700,
+      "total_tax": 278200
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC019",
+    "description": "Salary 50L no deductions age 30",
+    "input": {
+      "gross_salary": 5000000,
+      "basic_salary": 5000000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "basic",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 4950000,
+      "tax_before_rebate": 1297500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 51900,
+      "total_tax": 1349400
+    },
+    "expected_new_regime": {
+      "taxable_income": 4925000,
+      "tax_before_rebate": 1167500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 46700,
+      "total_tax": 1214200
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC025",
+    "description": "Old taxable 500000 at rebate limit 5L",
+    "input": {
+      "gross_salary": 550000,
+      "basic_salary": 550000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "slab_boundary_old",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 500000,
+      "tax_before_rebate": 12500,
+      "rebate_87a": 12500,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "expected_new_regime": {
+      "taxable_income": 475000,
+      "tax_before_rebate": 8750,
+      "rebate_87a": 8750,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC026",
+    "description": "Old taxable 500001 rebate cliff",
+    "input": {
+      "gross_salary": 550001,
+      "basic_salary": 550001,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "slab_boundary_old",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 500001,
+      "tax_before_rebate": 12500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 500,
+      "total_tax": 13000
+    },
+    "expected_new_regime": {
+      "taxable_income": 475001,
+      "tax_before_rebate": 8750,
+      "rebate_87a": 8750,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC028",
+    "description": "Old taxable 1000000 at 10L boundary",
+    "input": {
+      "gross_salary": 1050000,
+      "basic_salary": 1050000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "slab_boundary_old",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 1000000,
+      "tax_before_rebate": 112500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 4500,
+      "total_tax": 117000
+    },
+    "expected_new_regime": {
+      "taxable_income": 975000,
+      "tax_before_rebate": 47500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 1900,
+      "total_tax": 49400
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC033",
+    "description": "Super senior taxable 500000 at super exemption",
+    "input": {
+      "gross_salary": 550000,
+      "basic_salary": 550000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 85,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "slab_boundary_old",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 500000,
+      "tax_before_rebate": 0,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "expected_new_regime": {
+      "taxable_income": 475000,
+      "tax_before_rebate": 8750,
+      "rebate_87a": 8750,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC037",
+    "description": "New taxable 300000 at 3L",
+    "input": {
+      "gross_salary": 375000,
+      "basic_salary": 375000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "slab_boundary_new",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 325000,
+      "tax_before_rebate": 3750,
+      "rebate_87a": 3750,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "expected_new_regime": {
+      "taxable_income": 300000,
+      "tax_before_rebate": 0,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC040",
+    "description": "New taxable 600000 at 6L",
+    "input": {
+      "gross_salary": 675000,
+      "basic_salary": 675000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "slab_boundary_new",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 625000,
+      "tax_before_rebate": 37500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 1500,
+      "total_tax": 39000
+    },
+    "expected_new_regime": {
+      "taxable_income": 600000,
+      "tax_before_rebate": 15000,
+      "rebate_87a": 15000,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC043",
+    "description": "New taxable 900000 at 9L",
+    "input": {
+      "gross_salary": 975000,
+      "basic_salary": 975000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "slab_boundary_new",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 925000,
+      "tax_before_rebate": 97500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 3900,
+      "total_tax": 101400
+    },
+    "expected_new_regime": {
+      "taxable_income": 900000,
+      "tax_before_rebate": 40000,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 1600,
+      "total_tax": 41600
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC081",
+    "description": "80C at max 1.5L",
+    "input": {
+      "gross_salary": 1200000,
+      "basic_salary": 1200000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 150000,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "deductions",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 1000000,
+      "tax_before_rebate": 112500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 4500,
+      "total_tax": 117000
+    },
+    "expected_new_regime": {
+      "taxable_income": 1125000,
+      "tax_before_rebate": 68750,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 2750,
+      "total_tax": 71500
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC084",
+    "description": "80CCD 1B at max 50K",
+    "input": {
+      "gross_salary": 1200000,
+      "basic_salary": 1200000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "deductions",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 1100000,
+      "tax_before_rebate": 142500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 5700,
+      "total_tax": 148200
+    },
+    "expected_new_regime": {
+      "taxable_income": 1125000,
+      "tax_before_rebate": 68750,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 2750,
+      "total_tax": 71500
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC086",
+    "description": "80D self at max 25K under 60",
+    "input": {
+      "gross_salary": 1200000,
+      "basic_salary": 1200000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 25000,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "deductions",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 1125000,
+      "tax_before_rebate": 150000,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 6000,
+      "total_tax": 156000
+    },
+    "expected_new_regime": {
+      "taxable_income": 1125000,
+      "tax_before_rebate": 68750,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 2750,
+      "total_tax": 71500
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC089",
+    "description": "80D parents 25K non-senior",
+    "input": {
+      "gross_salary": 1200000,
+      "basic_salary": 1200000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 25000,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "deductions",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 1125000,
+      "tax_before_rebate": 150000,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 6000,
+      "total_tax": 156000
+    },
+    "expected_new_regime": {
+      "taxable_income": 1125000,
+      "tax_before_rebate": 68750,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 2750,
+      "total_tax": 71500
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC092",
+    "description": "80C 1.5L plus 80CCD 50K combo",
+    "input": {
+      "gross_salary": 1200000,
+      "basic_salary": 1200000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "deductions",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 950000,
+      "tax_before_rebate": 102500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 4100,
+      "total_tax": 106600
+    },
+    "expected_new_regime": {
+      "taxable_income": 1125000,
+      "tax_before_rebate": 68750,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 2750,
+      "total_tax": 71500
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC094",
+    "description": "All deductions at max non-senior",
+    "input": {
+      "gross_salary": 1200000,
+      "basic_salary": 1200000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 150000,
+      "section_80ccd_1b": 50000,
+      "section_80d_self": 25000,
+      "section_80d_parents": 25000,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "deductions",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 900000,
+      "tax_before_rebate": 92500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 3700,
+      "total_tax": 96200
+    },
+    "expected_new_regime": {
+      "taxable_income": 1125000,
+      "tax_before_rebate": 68750,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 2750,
+      "total_tax": 71500
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC101",
+    "description": "Home loan 50K",
+    "input": {
+      "gross_salary": 1500000,
+      "basic_salary": 1500000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 50000,
+      "financial_year": "2024-25"
+    },
+    "category": "home_loan",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 1400000,
+      "tax_before_rebate": 232500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 9300,
+      "total_tax": 241800
+    },
+    "expected_new_regime": {
+      "taxable_income": 1425000,
+      "tax_before_rebate": 125000,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 5000,
+      "total_tax": 130000
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC104",
+    "description": "Home loan 2L at max",
+    "input": {
+      "gross_salary": 1500000,
+      "basic_salary": 1500000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 200000,
+      "financial_year": "2024-25"
+    },
+    "category": "home_loan",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 1250000,
+      "tax_before_rebate": 187500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 7500,
+      "total_tax": 195000
+    },
+    "expected_new_regime": {
+      "taxable_income": 1425000,
+      "tax_before_rebate": 125000,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 5000,
+      "total_tax": 130000
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC111",
+    "description": "Old taxable 500000 at rebate full rebate",
+    "input": {
+      "gross_salary": 550000,
+      "basic_salary": 550000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "rebate_87a",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 500000,
+      "tax_before_rebate": 12500,
+      "rebate_87a": 12500,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "expected_new_regime": {
+      "taxable_income": 475000,
+      "tax_before_rebate": 8750,
+      "rebate_87a": 8750,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC112",
+    "description": "Old taxable 500001 just above rebate cliff",
+    "input": {
+      "gross_salary": 550001,
+      "basic_salary": 550001,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "rebate_87a",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 500001,
+      "tax_before_rebate": 12500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 500,
+      "total_tax": 13000
+    },
+    "expected_new_regime": {
+      "taxable_income": 475001,
+      "tax_before_rebate": 8750,
+      "rebate_87a": 8750,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC121",
+    "description": "New taxable 700000 at rebate full rebate",
+    "input": {
+      "gross_salary": 775000,
+      "basic_salary": 775000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "rebate_87a",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 725000,
+      "tax_before_rebate": 57500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 2300,
+      "total_tax": 59800
+    },
+    "expected_new_regime": {
+      "taxable_income": 700000,
+      "tax_before_rebate": 20000,
+      "rebate_87a": 20000,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC122",
+    "description": "New taxable 700001 just above rebate cliff",
+    "input": {
+      "gross_salary": 775001,
+      "basic_salary": 775001,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 30,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "rebate_87a",
+    "edge_case": true,
+    "expected_old_regime": {
+      "taxable_income": 725001,
+      "tax_before_rebate": 57500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 2300,
+      "total_tax": 59800
+    },
+    "expected_new_regime": {
+      "taxable_income": 700001,
+      "tax_before_rebate": 20000,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 800,
+      "total_tax": 20800
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC171",
+    "description": "Senior 60 with 8L salary",
+    "input": {
+      "gross_salary": 800000,
+      "basic_salary": 800000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 65,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "senior_citizen",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 750000,
+      "tax_before_rebate": 60000,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 2400,
+      "total_tax": 62400
+    },
+    "expected_new_regime": {
+      "taxable_income": 725000,
+      "tax_before_rebate": 22500,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 900,
+      "total_tax": 23400
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC176",
+    "description": "Super senior 80 with 6L salary",
+    "input": {
+      "gross_salary": 600000,
+      "basic_salary": 600000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 85,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "senior_citizen",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 550000,
+      "tax_before_rebate": 10000,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 400,
+      "total_tax": 10400
+    },
+    "expected_new_regime": {
+      "taxable_income": 525000,
+      "tax_before_rebate": 11250,
+      "rebate_87a": 11250,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  },
+  {
+    "id": "TC178",
+    "description": "Super senior 80 with 5L zero tax",
+    "input": {
+      "gross_salary": 500000,
+      "basic_salary": 500000,
+      "da": 0,
+      "hra_received": 0,
+      "rent_paid": 0,
+      "city_type": "non_metro",
+      "age": 85,
+      "section_80c": 0,
+      "section_80ccd_1b": 0,
+      "section_80d_self": 0,
+      "section_80d_parents": 0,
+      "parents_senior_citizen": false,
+      "home_loan_interest": 0,
+      "financial_year": "2024-25"
+    },
+    "category": "senior_citizen",
+    "edge_case": false,
+    "expected_old_regime": {
+      "taxable_income": 450000,
+      "tax_before_rebate": 0,
+      "rebate_87a": 0,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "expected_new_regime": {
+      "taxable_income": 425000,
+      "tax_before_rebate": 6250,
+      "rebate_87a": 6250,
+      "surcharge": 0,
+      "cess": 0,
+      "total_tax": 0
+    },
+    "verified_against_official": true
+  }
+]
